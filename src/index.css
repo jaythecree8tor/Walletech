@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+@font-face {font-family: "Larsseit"; src: url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.eot");
+   src: url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.eot") format("embedded-opentype"), 
+   url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.woff2") format("woff2"),
+    url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.woff") format("woff"),
+     url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.ttf") format("truetype"),
+     url("./assets/fonts/Larsseit-Thin.otf") format("opentype"),
+     url("./assets/fonts/Larsseit-Medium.otf") format("opentype"),
+     url("./assets/fonts/Larsseit-Medium.otf") format("opentype"),
+      url("./assets/fonts/1a0f9c82ae37cc35dc3c8e6c81ea95a4.svg") format("svg"); }
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-green: #72e485;
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%);
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.441);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #defae2 0.89%,
+    #bff5be 17.23%,
+    #9df0a8 42.04%,
+    #7deb95 55.12%,
+    #5ce65e 71.54%,
+    #33cf5f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #defadf -43.27%,
+    #bef5c8 -21.24%,
+    #9df0ae 12.19%,
+    #7deb84 29.82%,
+    #5ce668 51.94%,
+    #33cf36 90.29%
+  );
+}
+
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #3c3c3c -78.47%,
+    #000000 91.61%
+  );
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    #ffffff00 -341.94%,
+    #101010 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #101010 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  background: var(--color-green);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+
+
+.feedback-card:hover {
+  background: var(--color-green);
+  box-shadow:  0 25px 50px -12px #72e485c9;
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(165, 255, 166, 0) 0%, #217633a0 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #c4f4cea6 0%, #67fc8761 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
 }
